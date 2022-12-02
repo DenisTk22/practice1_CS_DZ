@@ -21,3 +21,4 @@ if (max < number3)
     }
 
  Console.WriteLine("Максимальное число из" + " " + number1 + ", " + number2 + ", " + number3 + " : " + max);
+ // Просто вариант записи: Console.Write($"max = {number1}, min = {number2}");
