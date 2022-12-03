@@ -3,14 +3,16 @@ Console.WriteLine("Введите число: ");
 int num1 = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 int digit = num1;
 if (digit < 100)
-{
-    Console.WriteLine("Третьей цифры нет!");
-}
+    {
+        Console.WriteLine("Третьей цифры нет!");
+    }
 else
-    {while (num1 > 1000)
+    {
+        while (num1 > 1000)
         {
             digit = num1 / 10;
              num1 = digit;
         }
     int three = digit % 10;
-    Console.WriteLine($"Третья цифра вашего числа: {three}");}
+    Console.WriteLine($"Третья цифра вашего числа: {three}");
+    }
