@@ -7,7 +7,7 @@ if (dweek < 1 || dweek > 7)
 }
 else
 {
-    if (dweek = 6 || dweek = 7)
+    if (dweek == 6 || dweek == 7)
     {
         Console.WriteLine("Да, это выходной день! Ура!!!");
     }
