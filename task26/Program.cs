@@ -6,7 +6,7 @@ int ReadInt(string massage) // (1)int ReadInt()
     Console.WriteLine(massage); // (1)Console.WriteLine("Введите число"); 
     return Convert.ToInt32(Console.ReadLine());
 }
-// 
+
 int GetCountOfDigit(int number)
 {
     int count = 0;
@@ -17,8 +17,6 @@ int GetCountOfDigit(int number)
     }
     return count;
 }
-  
-
 
 int number = ReadInt("Введите число"); //(1)int a = ReadInt();
 int result = GetCountOfDigit(number);
