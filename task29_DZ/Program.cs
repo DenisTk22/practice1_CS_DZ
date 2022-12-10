@@ -10,7 +10,7 @@ int [] array = new int[8];
 
 for (int i = 0; i < array.Length; i++)
 {
-    array[i] = ReadInt($"Введите {i+1} элемент из 8");
+    array[i] = ReadInt($"Введите {i+1}-й элемент из {array.Length}");
 }
 
-Console.WriteLine(string.Join(", " , array));
+Console.WriteLine("Ваш массив: " + string.Join(", " , array));
