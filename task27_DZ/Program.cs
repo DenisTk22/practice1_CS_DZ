@@ -9,15 +9,15 @@ int ReadInt(string massage)
 int GetSum(int num)
 {
     int sum1 = 0;
-    int d = num;
-    while (d >= 10)
+    int d_int = num;
+    while (d_int >= 10)
     {
-        num = d;
+        num = d_int;
         num = num % 10;
-        d = d / 10;
+        d_int = d_int / 10;
         sum1 = sum1 + num;
     }
-    int sum = sum1 + d;
+    int sum = sum1 + d_int;
     return sum;
 }
 
