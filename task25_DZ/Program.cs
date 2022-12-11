@@ -22,4 +22,4 @@ int a = ReadInt("Введите певрое число:");
 int b = ReadInt("Введите второе число:");
 
 int result = GetDegree(a, b);
-Console.WriteLine($"{a} в степени {b} = {result}");                                                                                                                                                                                         
+Console.WriteLine($"{a} в степени {b} = {result}");          
