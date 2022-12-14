@@ -4,7 +4,6 @@
 
 int[] array = {1,2,3,4,5}; // задание метода для случайного массива
 
-
 int [] array2 = new int[(array.Length+1)/2];
 
 for (int i = 0; i < array2.Length; i++)
@@ -12,7 +11,7 @@ for (int i = 0; i < array2.Length; i++)
     array2[i] = array[i] * array[array.Length-1-i];
     if (i == array.Length - i -1)
     {
-        
+        array2[i] = array[i];
     }
 }
 
