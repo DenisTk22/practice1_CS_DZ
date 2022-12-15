@@ -20,7 +20,7 @@ int[] GetRandomArray(int length) // задание метода для случ�
 (int, int, int) sumChet(int[] array)
 {
     int indexmin = 0;
-    int indexmax = 1;
+    int indexmax = 0;
     for (int i = 0; i < array.Length; i++)
     {
     if (array[indexmax] < array[i])
