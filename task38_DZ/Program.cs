@@ -17,7 +17,7 @@ int[] GetRandomArray(int length) // задание метода для случ�
     return array;
 }
 
-(int, int, int) sumChet(int[] array)
+(int, int, int) sumChet(int[] array) // на входе используется массив arrayб на выходе можно определить три значения типа int
 {
     int indexmin = 0;
     int indexmax = 0;
