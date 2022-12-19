@@ -10,11 +10,11 @@ string ReadStr(string massage)
 int GetQty(string num)
 {
     int qty = 0;
-        while (num != "stop")
+    while (num != "stop")
     {
         int chislo = Convert.ToInt32(num);
-            if (chislo > 0)
-                {qty = qty + 1;}
+        if (chislo > 0)
+            {qty = qty + 1;}
         num = ReadStr("Введите число или stop для завершения:");
     }
     return qty;
