@@ -59,7 +59,6 @@ void GetNewMatrix(int[,] matr)
         }
 }
 
-
 int rowsCount = ReadInt("Введите число строк:");
 int columnCount = ReadInt("Введите число столбцов:");
 int[,] matrix = GetRandomMatrix(rowsCount, columnCount);

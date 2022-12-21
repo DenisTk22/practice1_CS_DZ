@@ -10,11 +10,10 @@ int ReadInt(string massage)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int [,] GetRandomMatrix(int rows, int columns, int leftRange=0, int rightRange=10) // параметры по умолчанию
+int [,] GetMatrix(int rows, int columns, int leftRange=0, int rightRange=10) // для leftRange=0 и rightRange=10 заданы параметры по умолчанию
 {
     int[,] matr = new int[rows, columns];
-    //var rand = new Random(); // var дает программе самой определить тип переменной
-    for (int i = 0; i < matr.GetLength(0); i++) // GetLength(0) - число строк
+        for (int i = 0; i < matr.GetLength(0); i++) // GetLength(0) - число строк
         {
             for (int j = 0; j < matr.GetLength(1); j++)
             {
@@ -38,5 +37,5 @@ void PrintMatrix(int[,] matr) // для вывода двумерного мас
 
 int rowsCount = ReadInt("Введите число строк:");
 int columnCount = ReadInt("Введите число столбцов:");
-int[,] matrix = GetRandomMatrix(rowsCount, columnCount);
+int[,] matrix = GetMatrix(rowsCount, columnCount);
 PrintMatrix(matrix);

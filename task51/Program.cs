@@ -39,26 +39,20 @@ void PrintMatrix(int[,] matr) // для вывода двумерного мас
         }
 }
 
-void GetNewMatrix(int[,] matr)
+int GetSum (int[,] matr)
 {
+    int sum = 0;
     for (int i = 0; i < matr.GetLength(0); i++) // GetLength(0) - число строк
         {
-            for (int j = 0; j < matr.GetLength(1); j++)
-            {
-                if (i%2 == 0 && j%2 == 0)
-                {
-                //    int a = matr[i, j];
-                //    matr[i, j] = a*a;
-                }
-            } 
+            sum = matr[i, i] + sum;
         }
+        return sum;
 }
-
 
 int rowsCount = ReadInt("Введите число строк:");
 int columnCount = ReadInt("Введите число столбцов:");
 int[,] matrix = GetRandomMatrix(rowsCount, columnCount);
 PrintMatrix(matrix);
 Console.WriteLine();
-GetNewMatrix(matrix);
-PrintMatrix(matrix);
+int result = GetSum(matrix);
+Console.WriteLine($"Сумма чисел, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д. = {result}");
