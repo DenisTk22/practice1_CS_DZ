@@ -31,17 +31,6 @@ void PrintMatrix(int[,] matr) // для вывода двумерного мас
         }
 }
 
-// void NewMatrixMN (int [,] matr)
-// {
-//     for (int i = 0; i < matr.GetLength(0); i++) // GetLength(0) - число строк
-//         {
-//             for (int j = 0; j < matr.GetLength(1); j++)
-//             {
-//                 matr[i, j] = matr[j, i];
-//             } 
-//         }
-// }
-
 int[,] NewMatrixMN (int [,] sourceM)
 {
     int[,] tmatrix = new int[sourceM.GetLength(1), sourceM.GetLength(0)];

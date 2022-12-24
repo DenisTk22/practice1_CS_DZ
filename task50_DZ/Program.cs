@@ -56,7 +56,6 @@ void DigitSerching (int[,] matr, int a, int b)
             for (int j = 0; j < matr.GetLength(1); j++)
             {
                 if (a == i && b == j)
-
                 {Console.WriteLine($"Искомый элемент: {matr[i,j]}");}
             } 
         }

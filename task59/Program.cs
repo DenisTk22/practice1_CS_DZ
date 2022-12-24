@@ -16,7 +16,7 @@ int ReadInt(string massage)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int [,] GetRandomMatrix(int rows, int columns, int leftRange=0, int rightRange=10) // параметры по умолчанию
+int [,] GetRandomMatrix(int rows, int columns, int leftRange=0, int rightRange=9) // параметры по умолчанию
 {
     int[,] matr = new int[rows, columns];
     var rand = new Random(); // var дает программе самой определить тип переменной
@@ -42,21 +42,6 @@ void PrintMatrix(int[,] matr) // для вывода двумерного мас
         }
 }
 
-(int, int) GetMin (int[,] matr)
-{
-    int min = matr[0,0];
-    for (int ik = 0; ik < matr.GetLength(0); ik++) // GetLength(0) - число строк
-        {
-            for (int jk = 0; jk < matr.GetLength(1); jk++)
-            {
-                if (min < matr[ik, jk])
-                {
-                    min = matr[ik, jk];
-                }
-            } 
-        }
-        return (ik, jk);
-}
 
 int[,] GetNewM (int[,] sourceMatrix)
 {
@@ -69,9 +54,9 @@ int[,] GetNewM (int[,] sourceMatrix)
             {
                 if (sourceMatrix[i, j] < min)
                 {
-                    min = sourceMatrix[i, j];
                     mini = i;
                     minj = j;
+                    min = sourceMatrix[i, j];
                 }
             } 
         }
@@ -84,12 +69,20 @@ int[,] GetNewM (int[,] sourceMatrix)
             for (int j = 0; j < newMatrix.GetLength(1); j++)
             {
                 if (j == minj) columnoffset = 1;
-                mewMatrix[i, j] = sourceMatrix[i + rowoffset, j + columnoffset];
+                newMatrix[i, j] = sourceMatrix[i + rowoffset, j + columnoffset];
             } 
+            columnoffset = 0;
         }
+    return newMatrix;
 }
 
 int rowsCount = ReadInt("Введите число строк:");
 int columnCount = ReadInt("Введите число столбцов:");
 int[,] matrix = GetRandomMatrix(rowsCount, columnCount);
 PrintMatrix(matrix);
+Console.WriteLine();
+int[,] newmatrix = GetNewM(matrix);
+PrintMatrix(newmatrix);
+
+
+
